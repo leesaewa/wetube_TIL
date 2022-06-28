@@ -1,5 +1,9 @@
 # wetube_TIL
 
+코드는 따로 올렸음.
+<a href="https://github.com/leesaewa/wetube-reloaded">코드는 이쪽으로</a>
+
+
 ## 220628_ express설정
 
 ```
