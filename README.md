@@ -36,7 +36,7 @@ html(lang="ko")
   - 변수는 #{}로 작성해야 함.
   - 변수만 작성하고 싶을 경우에는 이렇게 함. (변수와 텍스트를 섞어쓰지 않을 경우)
     - ``h1=pageTitle``
-- ``res.render("home", {pageTitle: "Home"}
+  - ``res.render("home", {pageTitle: "Home"}``
   - render는 2개의 argument를 받음. 하나는 ``view``, 다른 하나는 ``템플릿에 보낼 변수(pug)``
 
 ##### conditionals
