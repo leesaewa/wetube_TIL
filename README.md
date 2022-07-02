@@ -3,6 +3,126 @@
 코드는 따로 올렸음.
 <a href="https://github.com/leesaewa/wetube-reloaded">코드는 이쪽으로</a>
 
+
+## 220702
+
+#### pug
+- Haml의 영향을 많이 받은, Node.js 및 브라우저용 JavaScript로 구현된 고성능 템플릿 엔진
+- Pug는 이전에 "Jade"로 알려졌습니다. 그러나 "Jade"가 등록상표임이 밝혀져 이름을 변경함.
+- ``npm i pug``
+- 어떤 자바스크립트 코드라도 넣을 수 있음.
+
+##### partial
+- 반복작업을 따로 만들어서 include할 수 있음!!! 이게 강점임. it was cool
+- ``include partials/footer``
+
+##### inheritance(상속) / extends(확장)
+```
+doctype html 
+html(lang="ko")
+  head
+    title #{pageTitle} | Wetube
+
+  body 
+    block content
+  include partials/footer
+  ```
+
+- 베이스를 만들어서 그 베이스를 기준으로 확장시켜 가는 것.
+- 베이스 안에 block이나 variable을 만들 수 있음.
+###### block
+  - block = ``extends base``
+###### 변수
+  - 변수는 #{}로 작성해야 함.
+  - 변수만 작성하고 싶을 경우에는 이렇게 함. (변수와 텍스트를 섞어쓰지 않을 경우)
+    - ``h1=pageTitle``
+- ``res.render("home", {pageTitle: "Home"}
+  - render는 2개의 argument를 받음. 하나는 ``view``, 다른 하나는 ``템플릿에 보낼 변수(pug)``
+
+##### conditionals
+```
+if fakeUser.loggedIn
+            li 
+              a(href="/logout") Log Out
+          else
+            li 
+              a(href="/login") Login
+```
+- JS의 if문과 똑같음.
+
+##### iteration
+- 반복. each A in B = array B에있는것들을 A에 반복하여 나열.
+- Pug는 each와 while라는 두 가지 기본 반복 방법을 지원함.
+```
+ul
+each val in [1, 2, 3, 4, 5]
+li= val
+```
+- 배열이나 객체에 반복할 값이 없으면 실행될 else 블록을 추가할 수도 있음.
+  - 이 때 else는 js가 아님. 
+```
+- var values = [];
+ul
+each val in values
+li= val
+else
+li There are no values
+```
+
+- array설정해주기
+- array 넣을 템플릿에 가서
+  each video(anything whatever you want) in videos(videoController에서 설정해준 array)
+  li=video(same thing value before videoController에서 설정해준 array)
+
+
+##### mixin
+- scss랑 비슷한 역할인듯.
+- html 코드를 재사용할 수 있게 해줌.
+- partial이긴 하지만 데이터를 받을 수 있는 똑똑한 partial을 의미함.
+
+```
+-controller-
+const videos = [
+{
+title: "First Video",
+rating: 5,
+comments: 2,
+createdAt: "2 minutes ago",
+views: 62,
+id: 1,
+}
+]
+
+-mixin-
+mixin video(info)
+div
+h4=info.title
+ul
+li #{info.rating}/5.
+li #{info.comments}/comments.
+li Posted #{info.created}.
+li #{info.views} views.
+
+-pug-
+include mixins/video
+
+each info in videos
++video(info)
+```
+
+
+
+#### html 적용하는 법
+- pug라는 view engine을 쓴다. (템플릿 엔진)
+- 템플릿 엔진을 렌더링하기 위해 다음과 같은 어플리케이션 설정이 필요함.
+  - server.js에 ``app.set("view engine", "pug");`` 설정하고, 
+  - home(index)에 보여질 함수(controller) 안에 ``res.render("home")``로 express에 설정함
+  - 예) ``export const trending = (req, res) => res.render("home");``
+
+
+
+------
+
 ## 220630
 
 #### morgan
