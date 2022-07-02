@@ -4,7 +4,7 @@
 <a href="https://github.com/leesaewa/wetube-reloaded">코드는 이쪽으로</a>
 
 
-## 220702
+## 220702 TIL
 
 #### pug
 - Haml의 영향을 많이 받은, Node.js 및 브라우저용 JavaScript로 구현된 고성능 템플릿 엔진
@@ -123,7 +123,7 @@ each info in videos
 
 ------
 
-## 220630
+## 220630 TIL
 
 #### morgan
 - HTTP request logger middleware for node.js
@@ -199,7 +199,7 @@ app.use("/users", userRouter);
 
 -------
 
-## 220629
+## 220629 TIL
 
 #### middlewares
 ```
@@ -236,7 +236,9 @@ app.get("/", handleHome);
 
 ------
 
-## 220628_ express설정
+## 220628 TIL
+
+### express설정
 
 ```
 import express from "express";
