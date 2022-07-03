@@ -3,12 +3,59 @@
 코드는 따로 올렸음.
 <a href="https://github.com/leesaewa/wetube-reloaded">코드는 이쪽으로</a>
 
+## 220703 TIL
+
+#### Array database (가짜 데이터베이스로 샘플 비디오 만들기)
+
+##### array database와 HTML 상호작용 과정
+1. 각 비디오에 id 부여
+2. id를 기반으로 비디오마다 anchor 생성
+3. 임의의 id를 가진 url에 접근하려고 할 때, 해당 id를 가져와서 변수에 저장
+4. 저장된 id를 기반으로 해당 id 에 해당하는 object를 변수에 저장
+5. 저장된 object를 기반으로 HTML 렌더링하여 contents 출력
+
+```const { id } = req.params;
+const id = req.params.id;```
+
+##### 링크에 변수를 담는 법
+- 대상: href, class, id
+1. ``a(href=`/videos/${video.id}`)=video.title``
+2. ``a(href="/videos/" + video.id)=video.title``
+
+##### ternary operator
+- 만약 조회수가 ``1``일 때, ``views``가 아닌 ``view``가 출력되도록 함.
+  ``h3 #{video.views} #{video.views === 1 ? "view" : "views"}`` inline if문
+  -> 만약 video.views가 1과 같다면 'view'를, 같지 않다면 'views'를 보여줌.
+
+##### post
+``form(method="POST")``
+- 기본은 get인데 get은 구글이나 네이버에서 검색할 때 주로 사용함. (데이터를 받는 게 목적)
+- post방식은 파일을 보내거나, database에 있는 값을 바꿀 때, 로그인할 때 사용
+
+##### urlencoded
+- express에 내장된 미들웨어 기능.
+- express는 기본적으로 form을 처리하지 못함.
+- 옵션 중에서 ``extended``는 body에 있는 정보들을 js의 object로 보기 좋게 보여줌.
+  - ``true``가 기본값.
+- route를 사용하기 전에 선언해줘야 함.
+
+``app.use(express.urlencoded({ extended: true }));``
+-> 너의 express application이 form의 value들을 이해할 수 있도록 하고, 우리가 쓸 수 있는 자바스크립트 형식으로 변형시켜줄 거임.
+
+###### req.body
+- form을 통해 submit된 데이터의 키-값 쌍을 포함함. (주로 POST로 유저의 정보 또는 파일 업로드를 보냈을 때 )
+- 기본적으로는 undefined.
+- express.json(), express.urlencoded()와 같은 미들웨어를 사용해야 함.
+
+
+
+
+-------
 
 ## 220702 TIL
 
 #### pug
 - Haml의 영향을 많이 받은, Node.js 및 브라우저용 JavaScript로 구현된 고성능 템플릿 엔진
-- Pug는 이전에 "Jade"로 알려졌습니다. 그러나 "Jade"가 등록상표임이 밝혀져 이름을 변경함.
 - ``npm i pug``
 - 어떤 자바스크립트 코드라도 넣을 수 있음.
 
