@@ -14,8 +14,10 @@
 4. 저장된 id를 기반으로 해당 id 에 해당하는 object를 변수에 저장
 5. 저장된 object를 기반으로 HTML 렌더링하여 contents 출력
 
-```const { id } = req.params;
-const id = req.params.id;```
+```
+const { id } = req.params;
+const id = req.params.id;
+```
 
 ##### 링크에 변수를 담는 법
 - 대상: href, class, id
