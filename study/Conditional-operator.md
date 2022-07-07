@@ -39,7 +39,7 @@ console.log(getFee(null));
 // expected output: "$10.00"
 ```
 
-## 예시
+### 문법
 `condition ? exprIfTrue : exprIfFalse `
 
 #### condition (조건문)
