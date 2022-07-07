@@ -63,16 +63,15 @@ console.log(map1);
 ### 구문
 `arr.map(callback(currentValue[, index[, array]])[, thisArg])`
 
-#### 매개변수
-`callback`
+#### callback
 새로운 배열 요소를 생성하는 함수. 다음 세 가지 인수를 가집니다.
-`currentValue`
+#### currentValue
 처리할 현재 요소.
-`index (Optional)`
+#### index (Optional)
 처리할 현재 요소의 인덱스.
-`array (Optional)`
+#### array (Optional)
 `map()`을 호출한 배열.
-`thisArg (Optional)`
+#### thisArg (Optional)
 callback을 실행할 때 `this`로 사용되는 값.
 
 
