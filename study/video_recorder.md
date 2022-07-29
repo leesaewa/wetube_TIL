@@ -103,15 +103,6 @@ const mp4Url = URL.createObjectURL(mp4Blob);
 - 해당 파일이 거기에 제공되었는지 확인해야 함.
 - 해당 파일이 다른 위치에 있는 경우 호출할 때 기본 동작을 다시 작성할 수 있음.
 
-#### FFmpeg WebAssembly 에러날 때 (0.10~이상으로 진행시 버전 문제)
-1. http://localhost:4000/node_modules/@ffmpeg/core/dist/ffmpeg-core.js 404 (Not Found)
-```
-const ffmpeg = createFFmpeg({
-  corePath: "https://unpkg.com/@ffmpeg/core@0.10.0/dist/ffmpeg-core.js",
-  log: true,
-});
-```
-
 #### ArrayBuffer
 - ArrayBuffer 객체는 raw binary data buffer를 나타내는 데 사용됨.
 - 다른 언어에서는 종종 "byte array"이라고 하는 byte array임.
@@ -122,6 +113,29 @@ const ffmpeg = createFFmpeg({
 #### Blob
 - Blob 객체는 파일류의 불변하는 미가공 데이터를 나타냄.
 - 텍스트와 이진 데이터의 형태로 읽을 수 있으며, ReadableStream으로 변환한 후 그 메서드를 사용해 데이터를 처리할 수도 있음.
+
+------
+
+## FFmpeg WebAssembly 에러날 때 (0.10~이상으로 진행시 버전 문제)
+1. http://localhost:4000/node_modules/@ffmpeg/core/dist/ffmpeg-core.js 404 (Not Found)
+```
+const ffmpeg = createFFmpeg({
+  corePath: "https://unpkg.com/@ffmpeg/core@0.10.0/dist/ffmpeg-core.js",
+  log: true,
+});
+```
+2. Uncaught (in promise) ReferenceError: SharedArrayBuffer is not defined
+- `server.js`에 아래 추가
+```
+app.use(
+  session({
+    secret: process.env.COOKIE_SECRET,
+    resave: false,
+    saveUninitialized: false,
+    store: MongoStore.create({ mongoUrl: process.env.DB_URL }),
+  })
+);
+```
 
 ------
 
