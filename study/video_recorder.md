@@ -74,11 +74,51 @@ const handleDownload = () => {
 - WebAssembly에서 제공하는 브라우저 및 노드용 FFmpeg
 - ffmpeg.wasm은 FFmpeg의 순수한 Webassembly/Javascript 포트.
 - 그것은 비디오 및 오디오 녹음, 변환, 스트리밍 등을 브라우저 내부에서 할 수 있도록 함.
-- FFmpeg WebAssembly를 사용하는 이유는 FFmpeg를 사용해서 브라우저로 하여금 비디오 파일을 변환하기 위함.
+- FFmpeg WebAssembly를 사용하는 이유는 FFmpeg를 사용해서 브라우저로 하여금 비디오 파일을 변환하기 위함.
 - `npm install @ffmpeg/ffmpeg @ffmpeg/core`
 https://github.com/ffmpegwasm/ffmpeg.wasm
 https://www.npmjs.com/package/@ffmpeg/ffmpeg
 
+```
+const mp4File = ffmpeg.FS("readFile", "output.mp4");
+const mp4Blob = new Blob([mp4File.buffer], { type: "video/mp4" });
+const mp4Url = URL.createObjectURL(mp4Blob);
+ ```
 
 
+#### ffmpeg.FS(method, ...args): any
+- writeFile: 가상의 세계에 파일을 생성해줌.
+- multer처럼 실존하지 않지만 폴더와 파일이 컴퓨터 메모리에 저장되는 것과 비슷하다고 보면 됨.
+- `ffmpeg.FS("writeFile", "recording.webm", await fetchFile(videoFile));`
+
+#### fetchFile(media): Promise
+- 다양한 리소스에서 파일을 가져오기 위한 도우미 기능.
+- 때로는 처리하려는 비디오 / 오디오 파일이 원격 URL과 로컬 파일 시스템의 어딘가에 있을 수 있음.
+- 이 도우미 함수는 파일로 가져오고 ffmpeg.wasm이 사용할 Uint8Array 변수를 반환하는 데 도움이 됨.
+
+#### ffmpeg.load
+- ffmpeg.load()를 호출하면 기본적으로 http://localhost:3000/node_modules/@ffmpeg/core/dist/를 검색하여 필수 파일을 다운로드함.
+  - (ffmpeg-core.js, ffmpeg-core.wasm, ffmpeg-core.worker.js).
+- 해당 파일이 거기에 제공되었는지 확인해야 함.
+- 해당 파일이 다른 위치에 있는 경우 호출할 때 기본 동작을 다시 작성할 수 있음.
+
+#### FFmpeg WebAssembly 에러날 때 (0.10~이상으로 진행시 버전 문제)
+1. http://localhost:4000/node_modules/@ffmpeg/core/dist/ffmpeg-core.js 404 (Not Found)
+```
+const ffmpeg = createFFmpeg({
+  corePath: "https://unpkg.com/@ffmpeg/core@0.10.0/dist/ffmpeg-core.js",
+  log: true,
+});
+```
+
+#### ArrayBuffer
+- ArrayBuffer 객체는 raw binary data buffer를 나타내는 데 사용됨.
+- 다른 언어에서는 종종 "byte array"이라고 하는 byte array임.
+
+#### Uint8Array (양의 정수 8비트 배열)
+- Uint8Array 형식 배열은 8비트 부호 없는 정수 배열을 나타냄.
+
+#### Blob
+- Blob 객체는 파일류의 불변하는 미가공 데이터를 나타냄.
+- 텍스트와 이진 데이터의 형태로 읽을 수 있으며, ReadableStream으로 변환한 후 그 메서드를 사용해 데이터를 처리할 수도 있음.
 
