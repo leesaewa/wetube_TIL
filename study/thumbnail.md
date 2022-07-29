@@ -24,15 +24,3 @@ document.body.appendChild(thumbA);
 thumbA.click();
 ```
 
-## 불필요한 url제거 -> 속도 향상
-
-```
-//메모리에서 삭제
-ffmpeg.FS("unlink", "recording.webm");
-ffmpeg.FS("unlink", "output.mp4");
-ffmpeg.FS("unlink", "thumbnail.jpg");
-
-URL.revokeObjectURL(mp4Url);
-URL.revokeObjectURL(thumbUrl);
-URL.revokeObjectURL(videoFile);
-```
