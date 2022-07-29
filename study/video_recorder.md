@@ -69,6 +69,7 @@ const handleDownload = () => {
 - WebAssembly(Wasm)는 스택 기반 가상 머신을 위한 이진 명령 형식
 - 프로그래밍 언어를 위한 이식 가능한 컴파일 대상으로 설계되어 클라이언트 및 서버 응용 프로그램을 위해 웹에 배포할 수 있음.
 - 빠른 코딩이 가능함.
+- **모바일에서 동작하지 않을수도 있음.**
 
 ### FFmpeg WebAssembly
 - WebAssembly에서 제공하는 브라우저 및 노드용 FFmpeg
