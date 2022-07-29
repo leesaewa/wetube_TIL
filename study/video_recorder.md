@@ -122,3 +122,18 @@ const ffmpeg = createFFmpeg({
 - Blob 객체는 파일류의 불변하는 미가공 데이터를 나타냄.
 - 텍스트와 이진 데이터의 형태로 읽을 수 있으며, ReadableStream으로 변환한 후 그 메서드를 사용해 데이터를 처리할 수도 있음.
 
+------
+
+## 불필요한 url제거 -> 속도 향상
+
+```
+//메모리에서 삭제
+ffmpeg.FS("unlink", "recording.webm");
+ffmpeg.FS("unlink", "output.mp4");
+ffmpeg.FS("unlink", "thumbnail.jpg");
+
+URL.revokeObjectURL(mp4Url);
+URL.revokeObjectURL(thumbUrl);
+URL.revokeObjectURL(videoFile);
+```
+
