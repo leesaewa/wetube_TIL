@@ -1,13 +1,11 @@
 # 깃허브로 로그인하면 프로필 이미지가 노출이 안됨
 ### 문제
 <img src="https://user-images.githubusercontent.com/97646713/182016685-1ec64578-6ab4-4e72-9b3b-0fc855dc2fab.png" width="100%">
+
 - 위 캡쳐처럼 이미지 url은 정상이나, 노출이 되지 않음.
-
 - 콘솔에 이런 에러가 뜸.
-
 > net::ERR_BLOCKED_BY_RESPONSE.NotSameOriginAfterDefaultedToSameOriginByCoep 200 (net::ERR_BLOCKED_BY_RESPONSE.Cope 200에 의해 동일한 원점으로 기본 설정된 후 동일한 원점이 아님)
 
-- 뭔 소리얌...ㅠㅠ
 
 ### 알아낸 것
 - `require-corp`은 동영상 녹화할 때 에러가 나서 넣었던 것.
