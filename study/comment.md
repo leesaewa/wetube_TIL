@@ -37,7 +37,15 @@ https://expressjs.com/ko/api.html#express.json
 ### 404 Not Found
 서버는 요청받은 리소스를 찾을 수 없습니다. 브라우저에서는 알려지지 않은 URL을 의미합니다.
 
+## .prepend()
+- `prepend()`는 `appendChild()`와 거의 동일하게 동작하며 부모의 자식 요소로 추가되나 그 위치가 **맨 뒤가 아닌 맨 앞에 추가**되는 것이 다른 점.
 
+## res.json([body])
+- JSON response를 보냅니다. 이 메서드는 JSON.stringify()를 사용하여 JSON 문자열로 변환된 매개변수인 response를 보냄.
+
+## Response.json()
+- Response 인터페이스의 json() 메서드는 Response 스트림을 가져와 읽음.
+  (백엔드의 res.json() 또는 res.send()를 통해 보낸 JSON데이터를 가져온다.)
 
 -----
 
