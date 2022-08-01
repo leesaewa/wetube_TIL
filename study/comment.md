@@ -55,3 +55,13 @@ https://expressjs.com/ko/api.html#express.json
 
 
 
+-----
+
+# 챌린지 추가
+- 댓글 삭제하기 (삭제시 비디오나 유저 도큐먼트에서도 삭제 필요)
+
+## parentNode? parentElement?
+- <a href="https://dev-dain.tistory.com/128">참고</a>
+
+
+
