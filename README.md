@@ -5,6 +5,30 @@
 
 -------
 
+
+## express
+- <a href="https://github.com/leesaewa/wetube_TIL/blob/main/express/express_setting.md">express 설정</a>
+- <a href="https://github.com/leesaewa/wetube_TIL/blob/main/express/export.md">export</a>
+- <a href="https://github.com/leesaewa/wetube_TIL/blob/main/express/router.md">Router</a>
+- <a href="https://github.com/leesaewa/wetube_TIL/blob/main/express/parameter.md"> </a>
+- <a href="https://github.com/leesaewa/wetube_TIL/blob/main/express/parameter.md#%EC%A0%95%EA%B7%9C%EC%8B%9D">정규식</a>
+- <a href="https://github.com/leesaewa/wetube_TIL/blob/main/express/middlewares.md">middlewares</a>
+  - <a href="https://github.com/leesaewa/wetube_TIL/blob/main/express/morgan.md">morgan</a>
+- <a href="https://github.com/leesaewa/wetube_TIL/blob/main/express/return_render.md">return, render</a>
+- <a href="https://github.com/leesaewa/wetube_TIL/blob/main/express/img-upload.md">이미지 업로드하는 법</a>
+
+
+## mongoDB
+
+
+## pug
+
+## bug
+
+
+
+-----------
+
 ## mongo DB 설치/세팅
 ### chocolatey
 #### 설치
