@@ -30,6 +30,20 @@
 - <a href="https://github.com/leesaewa/wetube_TIL/blob/main/mongoDB/operations.md#promise">Promise</a>
 - <a href="https://github.com/leesaewa/wetube_TIL/blob/main/study/220711.md#exists">exists()</a>
 - <a href="https://github.com/leesaewa/wetube_TIL/blob/main/study/220711.md#id%EA%B0%92-%EC%A1%B0%EC%A0%95">ID값 조정</a>
+- <a href="https://github.com/leesaewa/wetube_TIL/blob/main/study/220712.md#mongoose-middlewares">mongoose middlewares</a>
+  - <a href="https://github.com/leesaewa/wetube_TIL/blob/main/study/220712.md#1-%ED%95%A8%EC%88%98-%EB%A7%8C%EB%93%A4%EA%B8%B0">middlewares 함수</a>
+- <a href="https://github.com/leesaewa/wetube_TIL/blob/main/study/220712.md#%EB%8F%99%EC%98%81%EC%83%81-%EC%82%AD%EC%A0%9C">Model.findByIdAndDelete</a>
+- <a href="https://github.com/leesaewa/wetube_TIL/blob/main/study/220712.md#%EA%B2%80%EC%83%89">검색 관련</a>
+- <a href="https://github.com/leesaewa/wetube_TIL/blob/main/study/220714.md#create-account">Create Account</a>
+  - <a href="https://github.com/leesaewa/wetube_TIL/blob/main/study/220714.md#password-hashing">password hashing</a>
+  - <a href="https://github.com/leesaewa/wetube_TIL/blob/main/study/220714.md#%EC%A4%91%EB%B3%B5-%EA%B0%92%EC%9D%BC-%EB%95%8C-%EC%97%90%EB%9F%AC-%ED%91%9C%EC%8B%9C">중복 값일 때, 에러 표시</a>
+  - <a href="https://github.com/leesaewa/wetube_TIL/blob/main/study/220714.md#password%EC%B2%B4%ED%81%AC">패스워드 체크</a>
+   - <a href="https://github.com/leesaewa/wetube_TIL/blob/main/study/220714.md#status-codes">Status Codes</a>
+- <a href="https://github.com/leesaewa/wetube_TIL/blob/main/study/220714.md#login">Login</a>
+  - <a href="https://github.com/leesaewa/wetube_TIL/blob/main/study/220714.md#compare-bcrypt">비밀번호 비교(compare (bcrypt))</a>
+  - <a href="https://github.com/leesaewa/wetube_TIL/blob/main/study/220714.md#session--cookie">session & cookie</a>
+  - <a href="https://github.com/leesaewa/wetube_TIL/blob/main/study/220714.md#%EB%AF%B8%EB%93%A4%EC%9B%A8%EC%96%B4-session-%EC%84%A4%EC%B9%98--%EC%82%AC%EC%9A%A9">미들웨어 session 설치 & 사용</a>
+  - <a href="https://github.com/leesaewa/wetube_TIL/blob/main/study/220714.md#reslocals">res.locals</a>
 
 
 
