@@ -24,9 +24,12 @@
 - <a href="https://github.com/leesaewa/wetube_TIL/blob/main/mongoDB/guide.md">mongoDB 명령어 모음</a>
 - <a href="https://github.com/leesaewa/wetube_TIL/blob/main/mongoDB/mongodb_install.md">mongo DB Install</a>
 - <a href="https://github.com/leesaewa/wetube_TIL/blob/main/mongoDB/operations.md#schemas">Schemas</a>
+- <a href="https://github.com/leesaewa/wetube_TIL/blob/main/study/220711.md#schema-property%EC%86%8D%EC%84%B1">schema property</a>
   - <a href="https://github.com/leesaewa/wetube_TIL/blob/main/mongoDB/schema.md">mongoose schema</a>
 - <a href="https://github.com/leesaewa/wetube_TIL/blob/main/mongoDB/operations.md#models">Models</a>
 - <a href="https://github.com/leesaewa/wetube_TIL/blob/main/mongoDB/operations.md#promise">Promise</a>
+- <a href="https://github.com/leesaewa/wetube_TIL/blob/main/study/220711.md#exists">exists()</a>
+- <a href="https://github.com/leesaewa/wetube_TIL/blob/main/study/220711.md#id%EA%B0%92-%EC%A1%B0%EC%A0%95">ID값 조정</a>
 
 
 
