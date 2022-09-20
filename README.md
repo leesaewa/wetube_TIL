@@ -17,6 +17,9 @@
 - <a href="https://github.com/leesaewa/wetube_TIL/blob/main/express/return_render.md">return, render</a>
 - <a href="https://github.com/leesaewa/wetube_TIL/blob/main/express/img-upload.md">이미지 업로드하는 법</a>
 - <a href="https://github.com/leesaewa/wetube_TIL/blob/main/express/form.md">form</a>
+- <a href="https://github.com/leesaewa/wetube_TIL/blob/main/study/220716_part1.md#session">Session</a>
+- <a href="https://github.com/leesaewa/wetube_TIL/blob/main/study/220716_part1.md#cookie-property">Cookie</a>
+- <a href="https://github.com/leesaewa/wetube_TIL/blob/main/study/220716_part1.md#environment-file%ED%99%98%EA%B2%BD%EB%B3%80%EC%88%98">environment file(환경변수)</a>
 
 
 
@@ -44,6 +47,7 @@
   - <a href="https://github.com/leesaewa/wetube_TIL/blob/main/study/220714.md#session--cookie">session & cookie</a>
   - <a href="https://github.com/leesaewa/wetube_TIL/blob/main/study/220714.md#%EB%AF%B8%EB%93%A4%EC%9B%A8%EC%96%B4-session-%EC%84%A4%EC%B9%98--%EC%82%AC%EC%9A%A9">미들웨어 session 설치 & 사용</a>
   - <a href="https://github.com/leesaewa/wetube_TIL/blob/main/study/220714.md#reslocals">res.locals</a>
+
 
 
 
