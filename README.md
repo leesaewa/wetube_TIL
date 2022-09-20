@@ -65,6 +65,11 @@
 - <a href="https://github.com/leesaewa/wetube_TIL/blob/main/bug/github_login.md">깃허브 프로필 이미지 노출</a>
 
 
+## social login
+- <a href="https://github.com/leesaewa/wetube_TIL/blob/main/study/220716_part2.md#github-login-%EC%86%8C%EC%85%9C-%EB%A1%9C%EA%B7%B8%EC%9D%B8-%EA%B5%AC%ED%98%84">Github login</a>
+- <a href=""></a>
+
+
 
 -----------
 
