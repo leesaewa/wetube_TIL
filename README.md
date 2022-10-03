@@ -71,7 +71,7 @@
 
 ## Front-end
 - <a href="https://github.com/leesaewa/wetube_TIL/blob/main/study/video_recorder.md#recorder">Recorder</a>
-- <a href="https://github.com/leesaewa/wetube_TIL/blob/main/study/video_recorder.md#recorder">다운로드 비디오 포맷 변환 (FFmpeg WebAssembly)</a>
+- <a href="https://github.com/leesaewa/wetube_TIL/blob/main/study/video_recorder.md#%EB%8B%A4%EC%9A%B4%EB%A1%9C%EB%93%9C-%EB%B9%84%EB%94%94%EC%98%A4-%ED%8F%AC%EB%A7%B7-%EB%B3%80%ED%99%98">다운로드 비디오 포맷 변환 (FFmpeg WebAssembly)</a>
 
 
 -----------
