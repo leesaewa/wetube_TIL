@@ -3,6 +3,9 @@
 코드는 따로 올렸음.
 <a href="https://github.com/leesaewa/wetube-reloaded">코드는 이쪽으로</a>
 
+## Dark mode 참고
+- <a href="https://github.com/leesaewa/wetube_TIL/blob/main/study/dark-mode.md">Dark mode</a>
+
 -------
 
 
