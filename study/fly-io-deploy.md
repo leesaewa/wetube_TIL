@@ -23,6 +23,7 @@
 
 - 그 아래를 찾아 보면 `RUN npm install && npm run build`라고 되어 있는 부분이 있음.
 - 그 `npm install` 뒷 부분에 `--production=false`를 추가해주면 제대로 `deploy`되는 걸 확인할 수가 있음!!!
-- 
+
 <img src="https://user-images.githubusercontent.com/97646713/206200695-e184f867-c5ff-4ec2-a614-06b7003ae4a3.png">
+
 > RUN npm install --production=false && npm run build
