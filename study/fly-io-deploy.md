@@ -10,10 +10,10 @@
 
 #### 1. `Dockerfile` 안에 아래와 같은 글이 주석으로 처리되어 있음.
 <img src="https://user-images.githubusercontent.com/97646713/206200505-a8899267-570d-4565-8c17-4f5c779ade29.png">
-> # NPM will not install any package listed in "devDependencies" when NODE_ENV is set to "production",
-> # to install all modules: "npm install --production=false".
-> # NODE_ENV가 "운영"으로 설정된 경우 NPM은 "devDependencies"에 나열된 패키지를 설치하지 않습니다.
-> # 모든 모듈을 설치합니다. "npm install --production=false"
+> NPM will not install any package listed in "devDependencies" when NODE_ENV is set to "production",
+> to install all modules: "npm install --production=false".
+> NODE_ENV가 "운영"으로 설정된 경우 NPM은 "devDependencies"에 나열된 패키지를 설치하지 않습니다.
+> 모든 모듈을 설치합니다. "npm install --production=false"
 
 - 아마도 바벨의 경우에는 `devDependencies`라서 production으로 설정될 경우에는 인식을 못하는 것 같음.
 
