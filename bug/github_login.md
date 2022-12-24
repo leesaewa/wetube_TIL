@@ -30,6 +30,7 @@ app.use((req, res, next) => {
 
 ### 다른 방법
 - `server.js`에 `res.header("Cross-Origin-Embedder-Policy", "require-corp");` -> `"require-corp"`를 바꾸지 않고, `img`에 `crossorigin`만 넣어줘도 제대로 출력된 걸 확인 *->했으나, 서버에 올리면 에러 뜰 확률 많음.*
+  - 서버에 올렸을 때 `crossorigin`만으로도 제대로 출력함. (22.12~현재)
 ```
 app.use((req, res, next) => {
   res.header("Cross-Origin-Embedder-Policy", "require-corp");
@@ -45,7 +46,6 @@ img(src=`${loggedInUser.socialOnly ? "":"/"}` + loggedInUser.avatarUrl, crossori
 - <a href="https://developer.mozilla.org/ko/docs/Web/Security/Same-origin_policy">동일 출처 정책(same-origin policy)</a>
 - <a href="https://runebook.dev/ko/docs/http/headers/cross-origin-embedder-policy">Cross-Origin-Embedder-Policy</a>
 - <a href="https://runebook.dev/ko/docs/html/attributes/crossorigin">HTML 속성 : crossorigin</a>
-- <a href=""></a>
 
 
 
